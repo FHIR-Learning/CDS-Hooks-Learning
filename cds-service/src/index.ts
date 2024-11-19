@@ -2,6 +2,7 @@ import express, { Request, Response } from "express";
 import morgan from "morgan";
 import logger from "./logger";
 import cors from "cors";
+import axios from "axios";
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -42,6 +43,16 @@ app.get("/cds-services", (req: Request, res: Response) => {
         id: "patient-view-reminder",
         title: "Patient View Reminder Service",
         description: "Reminds clinicians of routine check-ups and assessments.",
+        prefetch: {
+          patient: "Patient/{{context.patientId}}",
+        },
+      },
+      {
+        hook: "order-select",
+        id: "order-select-service",
+        title: "Order Select Allergy Check",
+        description:
+          "Verifica si el paciente es alérgico a los medicamentos seleccionados.",
         prefetch: {
           patient: "Patient/{{context.patientId}}",
         },

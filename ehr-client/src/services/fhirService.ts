@@ -12,3 +12,19 @@ export const getPatientById = async (id: string) => {
   const response = await axios.get(`${fhirServerUrl}/Patient/${id}`);
   return response.data;
 };
+
+export const getMedications = async (query: string) => {
+  try {
+    const response = await axios.get(`${fhirServerUrl}/Medication`, {
+      params: {
+        _content: query,
+      },
+    });
+    return response.data.entry
+      ? response.data.entry.map((entry: any) => entry.resource)
+      : [];
+  } catch (error) {
+    console.error("Error al obtener medicamentos:", error);
+    throw error;
+  }
+};

@@ -1,0 +1,14 @@
+{
+  "name": "load-patients",
+  "version": "1.0.0",
+  "main": "loadPatients.js",
+  "scripts": {
+    "seed": "npm run seed-patient && npm run seed-medication && npm run seed-allergy",
+    "seed-patient": "node loadPatients.js",
+    "seed-medication": "node loadMedications.js",
+    "seed-allergy": "node loadAllergies.js"
+  },
+  "dependencies": {
+    "axios": "^0.24.0"
+  }
+}

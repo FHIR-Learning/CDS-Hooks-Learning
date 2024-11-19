@@ -23,11 +23,15 @@ const loadPatients = async () => {
     const exists = await patientExists(patient.id);
     if (!exists) {
       try {
-        const response = await axios.post(`${fhirServerUrl}/Patient`, patient, {
-          headers: {
-            "Content-Type": "application/fhir+json",
-          },
-        });
+        const response = await axios.put(
+          `${fhirServerUrl}/Patient/${patient.id}`,
+          patient,
+          {
+            headers: {
+              "Content-Type": "application/fhir+json",
+            },
+          }
+        );
         console.log(
           `Paciente ${patient.id} cargado con éxito: ${response.status}`
         );

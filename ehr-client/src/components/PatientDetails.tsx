@@ -4,11 +4,13 @@ import "../styles.css";
 
 interface PatientDetailsProps {
   id: string;
-  onBack: () => void; // Prop para manejar la acción de volver
+  onBack: () => void;
+  onPrescribe: (patientId: string) => void;
 }
 
 const fhirServerUrl =
   process.env.REACT_APP_FHIR_SERVER_URL || "http://localhost:8080/fhir";
+
 const cdsServiceUrls = [
   process.env.REACT_APP_CDS_SERVICE_URL_1 ||
     "http://localhost:3001/cds-services/patient-view-service",
@@ -16,7 +18,11 @@ const cdsServiceUrls = [
     "http://localhost:3001/cds-services/patient-view-reminder",
 ];
 
-const PatientDetails: React.FC<PatientDetailsProps> = ({ id, onBack }) => {
+const PatientDetails: React.FC<PatientDetailsProps> = ({
+  id,
+  onBack,
+  onPrescribe,
+}) => {
   const [patient, setPatient] = useState<any>(null);
   const [cdsResponses, setCdsResponses] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
@@ -79,6 +85,14 @@ const PatientDetails: React.FC<PatientDetailsProps> = ({ id, onBack }) => {
           <p>
             <strong>Fecha de Nacimiento:</strong> {patient.birthDate}
           </p>
+
+          {/* Nuevo botón para prescribir */}
+          <button
+            onClick={() => onPrescribe(patient.id)}
+            className="prescribe-button"
+          >
+            Prescribir Medicación
+          </button>
 
           {cdsResponses.length > 0 && (
             <div className="cds-response-container">

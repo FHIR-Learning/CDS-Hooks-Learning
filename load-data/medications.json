@@ -1,0 +1,142 @@
+[
+  {
+    "resourceType": "Medication",
+    "id": "med1",
+    "code": {
+      "coding": [
+        {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "123456",
+          "display": "Paracetamol"
+        }
+      ],
+      "text": "Paracetamol"
+    }
+  },
+  {
+    "resourceType": "Medication",
+    "id": "med2",
+    "code": {
+      "coding": [
+        {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "789101",
+          "display": "Ibuprofeno"
+        }
+      ],
+      "text": "Ibuprofeno"
+    }
+  },
+  {
+    "resourceType": "Medication",
+    "id": "med3",
+    "code": {
+      "coding": [
+        {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "112233",
+          "display": "Amoxicilina"
+        }
+      ],
+      "text": "Amoxicilina"
+    }
+  },
+  {
+    "resourceType": "Medication",
+    "id": "med4",
+    "code": {
+      "coding": [
+        {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "445566",
+          "display": "Claritromicina"
+        }
+      ],
+      "text": "Claritromicina"
+    }
+  },
+  {
+    "resourceType": "Medication",
+    "id": "med5",
+    "code": {
+      "coding": [
+        {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "778899",
+          "display": "Metformina"
+        }
+      ],
+      "text": "Metformina"
+    }
+  },
+  {
+    "resourceType": "Medication",
+    "id": "med6",
+    "code": {
+      "coding": [
+        {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "334455",
+          "display": "Atenolol"
+        }
+      ],
+      "text": "Atenolol"
+    }
+  },
+  {
+    "resourceType": "Medication",
+    "id": "med7",
+    "code": {
+      "coding": [
+        {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "667788",
+          "display": "Losartan"
+        }
+      ],
+      "text": "Losartan"
+    }
+  },
+  {
+    "resourceType": "Medication",
+    "id": "med8",
+    "code": {
+      "coding": [
+        {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "990011",
+          "display": "Simvastatina"
+        }
+      ],
+      "text": "Simvastatina"
+    }
+  },
+  {
+    "resourceType": "Medication",
+    "id": "med9",
+    "code": {
+      "coding": [
+        {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "123789",
+          "display": "Atorvastatina"
+        }
+      ],
+      "text": "Atorvastatina"
+    }
+  },
+  {
+    "resourceType": "Medication",
+    "id": "med10",
+    "code": {
+      "coding": [
+        {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "456012",
+          "display": "Omeprazol"
+        }
+      ],
+      "text": "Omeprazol"
+    }
+  }
+]

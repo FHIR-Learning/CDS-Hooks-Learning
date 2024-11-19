@@ -31,6 +31,7 @@ services:
       - REACT_APP_FHIR_SERVER_URL=http://fhir-server:8080/fhir
       - REACT_APP_CDS_SERVICE_URL_1=http://cds-service:3001/cds-services/patient-view-service
       - REACT_APP_CDS_SERVICE_URL_2=http://cds-service:3001/cds-services/patient-view-reminder
+      - REACT_APP_CDS_SERVICE_URL_3=http://cds-service:3001/cds-services/check-allergy
     depends_on:
       - fhir-server
       - cds-service

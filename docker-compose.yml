@@ -1,0 +1,52 @@
+services:
+  # HAPI FHIR JPA Server
+  fhir-server:
+    container_name: fhir-server
+    image: "hapiproject/hapi:latest"
+    restart: on-failure
+    ports:
+      - "8080:8080"
+    configs:
+      - source: hapi
+        target: /app/config/application.yaml
+    depends_on:
+      - fhir-db
+
+  # CDS Service
+  cds-service:
+    build:
+      context: ./cds-service
+    container_name: cds-service
+    ports:
+      - "3001:3001"
+
+  # EHR Client
+  ehr-client:
+    build:
+      context: ./ehr-client
+    container_name: ehr-client
+    ports:
+      - "3000:80"
+    environment:
+      - REACT_APP_FHIR_SERVER_URL=http://fhir-server:8080/fhir
+      - REACT_APP_CDS_SERVICE_URL_1=http://cds-service:3001/cds-services/patient-view-service
+      - REACT_APP_CDS_SERVICE_URL_2=http://cds-service:3001/cds-services/patient-view-reminder
+    depends_on:
+      - fhir-server
+      - cds-service
+
+  # PostgreSQL
+  fhir-db:
+    image: postgres
+    container_name: hapi-fhir-db
+    restart: always
+    environment:
+      POSTGRES_DB: "hapi"
+      POSTGRES_USER: "admin"
+      POSTGRES_PASSWORD: "admin"
+    volumes:
+      - ./hapi.postgress.data:/var/lib/postgresql/data
+
+configs:
+  hapi:
+    file: ./hapi.application.yml

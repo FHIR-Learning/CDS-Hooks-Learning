@@ -1,0 +1,165 @@
+.patient-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.patient-table th,
+.patient-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.patient-table th {
+  background-color: #e0f7fa;
+  color: #333;
+}
+
+.patient-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.patient-table tr:hover {
+  background-color: #b2ebf2;
+}
+
+.view-button {
+  background-color: #00796b;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.view-button:hover {
+  background-color: #004d40;
+}
+
+.details-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.details-card h3 {
+  margin-top: 0;
+}
+
+.cds-response-container {
+  margin-top: 20px;
+}
+
+.cds-card {
+  background-color: #e0f7fa;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cds-card h5 {
+  margin: 0;
+  font-size: 18px;
+  color: #00796b;
+}
+
+.cds-card p {
+  margin: 10px 0;
+  color: #333;
+}
+
+.cds-card-source {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #555;
+}
+
+.cds-card a {
+  color: #004d40;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cds-card a:hover {
+  text-decoration: underline;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+}
+
+.cds-response-container {
+  margin-top: 20px;
+}
+
+.cds-card {
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cds-card-info {
+  background-color: #e0f7fa;
+  border-left: 6px solid #00796b;
+}
+
+.cds-card-warning {
+  background-color: #fff3e0;
+  border-left: 6px solid #f57c00;
+}
+
+.cds-card-critical {
+  background-color: #ffebee;
+  border-left: 6px solid #d32f2f;
+}
+
+.cds-card h5 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.cds-card p {
+  margin: 10px 0;
+  color: #555;
+}
+
+.cds-card-source {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #777;
+}
+
+.cds-card a {
+  color: #00796b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cds-card a:hover {
+  text-decoration: underline;
+}
+
+.back-button {
+  background-color: #00796b;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #004d40;
+}
